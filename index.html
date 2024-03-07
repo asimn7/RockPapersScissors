@@ -1,10 +1,68 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <script src="javascript.js"></script> 
-  <title>Document</title>
-</head>
-<body>
-</body>
+<html lang="en"> 
+    <head>
+        <meta charset="utf-8">
+        <title>Rock-Paper-Scissors</title>
+        <meta name="description" content="Rock-Paper-Scissors">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="HandheldFriendly" content="true">
+        <link id="linkElement" rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+<div class="second-body">
+    <div class="container">
+        <div class="score-box">
+            <h3>SCORE</h3>
+            <div class="player-score">0</div>
+            <div class="comp-score">0</div>
+        </div>
+
+        <div class="comp-gif-box">
+            <img class="comp-gif-img"src="https://media1.tenor.com/images/c4c56abc62d84f14746e5389f92bcad6/tenor.gif?itemid=3478470" alt="Tv GIF - Television Galaxies Hipster GIFs" style="max-width: 546px; background-color: rgb(86, 97, 103);" width="230" height="150">
+        </div>
+        
+        <div class="player-weapons-box">
+            <button id="paper"></button>
+            <button id="scissors"></button>
+            <button id="rock"></button>
+        </div>
+        
+        <!-- clicked preview -->
+        <div>
+            <img id="clicked-r" style="display: none" src="images/r-trimed.png">
+            <img id="clicked-p" style="display: none" src="images/p-trimed.png">
+            <img id="clicked-s" style="display: none" src="images/s-trimed.png">
+        </div>
+        <!-- guessed preview -->
+        <div>
+            <img id="compguess-r" style="display: none" src="images/r-trimed.png">
+            <img id="compguess-p" style="display: none" src="images/p-trimed.png">
+            <img id="compguess-s" style="display: none" src="images/s-trimed.png">
+        </div>
+
+        <!-- winmsg container -->
+        <div class="win-container">
+            <h1 class="winner">-----</h1>
+        </div>
+        
+        <!-- number of rounds -->
+        <div class="rounds-input">
+            number of rounds (5-100):
+            <input id="input-value" type="number" name="numberofrounds" min="5" max="100" step="5" value="10">
+        </div>
+
+        <!-- pop up window -->
+        <div class="popup-container" style="display: none">
+            <h1 class='game-over'>GAME OVER</h1>
+            <h2 class='winner-call'></h2>
+            <p class='prize' style="display: none">Congratulations You Won, Well Done</p>
+            <button type="button" class='reset'>Play Again</button>
+        </div>
+        <img src="images/glow.png" class="glow">
+    </div>
+</div>
+    <script src="javascript.js"></script>
+    </body>
 </html>
